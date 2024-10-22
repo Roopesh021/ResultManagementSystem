@@ -1,0 +1,121 @@
+.admin-dashboard {
+  background-color: #f8f9fb;
+  text-align: center;
+}
+
+.heading {
+  background-color: #fff;
+  padding: 23px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #e1e6f0;
+}
+
+.heading h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.dash-icon {
+  font-size: 42px;
+  padding: 7px;
+  background-color: red;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.tabs {
+  width: 75%;
+  background-color: red;
+  color: #fff;
+  margin-top: 23px;
+  margin: auto;
+}
+
+.tabs button {
+  padding: 5px 10px;
+  margin: 15px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs button.active {
+  border-bottom: 2px solid #fff;
+  font-weight: bold;
+}
+
+.upload-section {
+  border: 2px dashed #ccc;
+  padding: 40px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.upload-section:hover {
+  background-color: #f0f8ff;
+}
+
+p {
+  margin-top: 10px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.form-section {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  margin: 97px 0px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 16px -2px rgba(42, 115, 217, 0.2);
+}
+
+.form-container label {
+  font-size: 50px;
+}
+
+.form-container button {
+  font-size: 20px;
+}
+
+.admin-table {
+  background-color: #f8f9fb;
+}
+.table-section {
+  background-color: #f8f9fb;
+  width: 75%;
+  margin: auto;
+  padding: 50px 0px;
+}
+.table-head {
+  background-color: red;
+  color: #fff;
+}
+.t-head {
+  padding: 17px 15px;
+  color: #fff;
+}
+.t-data {
+  padding: 17px 15px;
+}
+.t-body {
+  background-color: #fff;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

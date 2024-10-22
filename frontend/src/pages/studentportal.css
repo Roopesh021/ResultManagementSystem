@@ -1,0 +1,46 @@
+.student-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-section h1 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 37px;
+}
+
+.search-bar {
+  width: 50%;
+}
+
+.result-section {
+  width: 80%;
+  background-color: #f8f9fb;
+  margin: 53px 0px;
+  padding: 45px;
+}
+
+.r-head {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.item-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.total {
+  margin: 12px 0px;
+  font-size: 25px;
+}
+
+.rlt-heading {
+  color: red;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+}

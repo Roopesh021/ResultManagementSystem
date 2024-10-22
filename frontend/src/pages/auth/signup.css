@@ -1,0 +1,61 @@
+.signup-section {
+  background-color: #f8f9fb;
+  padding: 120px 20px 240px 20px;
+}
+
+.f-container {
+  width: 30%;
+  margin: auto;
+  padding: 40px;
+  box-shadow: 0 15px 45px rgba(21, 31, 71, 0.1);
+}
+
+.f-container h1 {
+  text-align: center;
+  color: var(--dark-slate-blue);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.f-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 30px;
+}
+
+.f-radio {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.f-radio label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.f-radio input {
+  transform: scale(1.5);
+  accent-color: var(--lavender-2);
+  cursor: pointer;
+}
+.f-label label {
+  font-size: 18px;
+  font-weight: 500;
+}
+.f-label input {
+  background-color: #f8f9fb;
+  padding: 14px 5px 14px 20px;
+  border: 0 #000;
+  outline: none;
+  color: #30364d;
+  font-size: 16px;
+  font-weight: 400;
+  box-shadow: 0 10px 30px rgba(21, 31, 71, 0.1);
+}
+
+.f-span {
+  margin-left: 7px;
+  color: var(--royal-blue);
+}
