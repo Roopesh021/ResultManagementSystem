@@ -1,6 +1,7 @@
 .signup-section {
+  height: 100vh;
   background-color: #f8f9fb;
-  padding: 120px 20px 240px 20px;
+  padding: 120px 20px 120px 20px;
 }
 
 .f-container {
@@ -12,9 +13,8 @@
 
 .f-container h1 {
   text-align: center;
-  color: var(--dark-slate-blue);
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .f-label {
@@ -24,22 +24,6 @@
   margin-top: 30px;
 }
 
-.f-radio {
-  display: flex;
-  gap: 10px;
-  margin-top: 30px;
-}
-
-.f-radio label {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.f-radio input {
-  transform: scale(1.5);
-  accent-color: var(--lavender-2);
-  cursor: pointer;
-}
 .f-label label {
   font-size: 18px;
   font-weight: 500;
@@ -58,4 +42,8 @@
 .f-span {
   margin-left: 7px;
   color: var(--royal-blue);
+}
+
+.a-span {
+  color: red;
 }

@@ -46,65 +46,65 @@ const Header = () => {
   };
   return (
     <>
-      <header className="header-section">
-        <nav className="navbar">
-          {!user ? (
-            <>
+      {!user ? (
+        <>
+          <header className="header-section">
+            <nav className="navbar">
               <Link to="/">
                 <div className="logo">
-                  Zidio<span className="logo-span">ResultWave</span>
+                  <img src="./logo.svg"></img>
+                  <h1>
+                    Zidio<span className="logo-span">ResultWave</span>
+                  </h1>
                 </div>
               </Link>
-              <Link to="/result" className="hover:text-red-500">
+              <Link to="/result" className="nav-link hover:text-red-500">
                 Result
               </Link>
-            </>
-          ) : (
-            <>
-              <Link to="/dashboard">
-                <div className="logo">
-                  Zidio<span className="logo-span">ResultWave</span>
-                </div>
-              </Link>
-              <div className="r-nav">
-                <div className="hero-search">
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    value={studentId}
-                    onChange={(e) => setStudentId(e.target.value)}
-                  />
-                  <button onClick={handleSearch} className="button search-btn">
-                    Search
-                  </button>
-                </div>
-                <Popover>
-                  <PopoverTrigger>
-                    <Avatar className="cursor-pointer h-12 w-12">
-                      <AvatarImage
-                        src="https://github.com/shadcn.png"
-                        className=""
-                      />
-                    </Avatar>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-70">
-                    <div className="profile-container">
-                      <Avatar className="cursor-pointer">
-                        <AvatarImage src="https://github.com/shadcn.png" />
-                      </Avatar>
-                      <h4 className="font-medium">{user.fullname}</h4>
-                    </div>
-                    <div onClick={logoutHandler} className="logout">
-                      <MdLogout className="logout-icon" />
-                      <button>Logout</button>
-                    </div>
-                  </PopoverContent>
-                </Popover>
+            </nav>
+          </header>
+        </>
+      ) : (
+        <>
+          <header className="admin-header-section">
+            <nav className="navbar">
+              <div className="hero-search">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  value={studentId}
+                  onChange={(e) => setStudentId(e.target.value)}
+                />
+                <button onClick={handleSearch} className="button search-btn">
+                  Search
+                </button>
               </div>
-            </>
-          )}
-        </nav>
-      </header>
+              <Popover>
+                <PopoverTrigger>
+                  <Avatar className="cursor-pointer h-12 w-12">
+                    <AvatarImage
+                      src="https://github.com/shadcn.png"
+                      className=""
+                    />
+                  </Avatar>
+                </PopoverTrigger>
+                <PopoverContent className="w-70">
+                  <div className="profile-container">
+                    <Avatar className="cursor-pointer">
+                      <AvatarImage src="https://github.com/shadcn.png" />
+                    </Avatar>
+                    <h4 className="font-medium">{user.fullname}</h4>
+                  </div>
+                  <div onClick={logoutHandler} className="logout">
+                    <MdLogout className="logout-icon" />
+                    <button>Logout</button>
+                  </div>
+                </PopoverContent>
+              </Popover>
+            </nav>
+          </header>
+        </>
+      )}
     </>
   );
 };

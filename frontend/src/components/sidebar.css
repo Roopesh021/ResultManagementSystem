@@ -1,0 +1,103 @@
+.sidebar-container {
+  width: 20%;
+  height: 100vh;
+  border-right: 1px solid #e1e6f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.side-bar-logo {
+  height: 12%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.sidebar-img {
+  width: 50px;
+  height: 43px;
+}
+
+.side-bar-logo-span {
+  color: red;
+  font-size: 18px;
+  margin-left: 1px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.sidebar-nav-container {
+  height: 88%;
+  padding: 25px;
+}
+
+.sidebar-nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.sidebar-up {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.sidebar-nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.sidebar-nav-list:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.sidebar-link {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.sidebar-nav-link:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.sidebar-icon {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.drop-icon {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.s-m-top {
+  margin-top: 3px;
+}

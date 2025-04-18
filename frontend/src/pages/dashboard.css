@@ -1,21 +1,35 @@
-.admin-dashboard {
-  background-color: #f8f9fb;
-  text-align: center;
-}
-
-.heading {
-  background-color: #fff;
-  padding: 23px;
+.a-head {
   display: flex;
   align-items: center;
+  padding: 23px;
   gap: 12px;
   border-bottom: 1px solid #e1e6f0;
 }
 
-.heading h1 {
+.a-head h1 {
   font-size: 20px;
   font-weight: 600;
 }
+
+.a-card {
+  width: 20%;
+  height: 87px;
+  background-color: red;
+  color: #fff;
+  border-radius: 6px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-user-icon {
+  font-size: 30px;
+  border: 1px solid white;
+  padding: 3px;
+  border-radius: 16px;
+}
+
 .dash-icon {
   font-size: 42px;
   padding: 7px;
@@ -24,11 +38,15 @@
   color: #fff;
 }
 
+.a-content {
+  background-color: #f8f9fb;
+  padding: 35px;
+}
+
 .tabs {
-  width: 75%;
+  width: 77%;
   background-color: red;
   color: #fff;
-  margin-top: 23px;
   margin: auto;
 }
 
@@ -43,21 +61,6 @@
 .tabs button.active {
   border-bottom: 2px solid #fff;
   font-weight: bold;
-}
-
-.upload-section {
-  border: 2px dashed #ccc;
-  padding: 40px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.upload-section:hover {
-  background-color: #f0f8ff;
-}
-
-p {
-  margin-top: 10px;
 }
 
 input[type="file"] {
@@ -90,26 +93,21 @@ input[type="file"] {
   font-size: 20px;
 }
 
-.admin-table {
-  background-color: #f8f9fb;
-}
 .table-section {
-  background-color: #f8f9fb;
-  width: 75%;
+  width: 77%;
   margin: auto;
-  padding: 50px 0px;
 }
-.table-head {
+
+.t-head {
   background-color: red;
   color: #fff;
-}
-.t-head {
   padding: 17px 15px;
-  color: #fff;
 }
+
 .t-data {
   padding: 17px 15px;
 }
+
 .t-body {
   background-color: #fff;
 }

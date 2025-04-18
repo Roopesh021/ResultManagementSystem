@@ -47,7 +47,9 @@ const Login = () => {
     <>
       <div className="signup-section">
         <form onSubmit={submitHandler} className="f-container">
-          <h1>Admin Login</h1>
+          <h1>
+            Admin <span className="a-span">Login</span>
+          </h1>
           <div className="f-label">
             <label>Email</label>
             <input

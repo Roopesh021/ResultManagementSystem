@@ -1,0 +1,30 @@
+!-- Dashboard --!
+
+1.) Dashboard 
+
+2.) Role >> Add Roles with basic CURD Operation
+         >> Search Roles
+
+         --> Role Name -> Web Development
+                       -> Data Analytics
+                       -> UI/UX Design
+
+         --> Duration  -> 1 Month
+                       -> 2 Months
+                       -> 3 Months
+
+         --> Charges
+
+3.) Candidates >> Add Candidates with basic CURD Operation >> Search Candidates
+               >> Add Marks
+
+               --> Student Id 
+               --> Name
+               --> Email
+               --> Gender
+               --> Contact No.
+               --> Select Role
+               --> Country
+               --> Start Date
+
+4.) Results >> Search Functionality

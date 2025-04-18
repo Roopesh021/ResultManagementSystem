@@ -46,7 +46,9 @@ const SignUp = () => {
     <>
       <div className="signup-section">
         <form onSubmit={submitHandler} className="f-container">
-          <h1>SignUp</h1>
+          <h1>
+            Sign<span className="a-span">Up</span>
+          </h1>
           <div className="f-label">
             <label>Full Name</label>
             <input

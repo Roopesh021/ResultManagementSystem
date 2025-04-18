@@ -20,8 +20,6 @@ export const fileUpload = async (req,res) =>{
             if (!result) {
               result = new Student({ studentId: row.studentId });
             }
-            result.name = row.name;
-            result.email = row.email;
             result[`${category}Marks`] = row[`${category}Marks`];
             result.totalMarks = calculateTotalMarks(result);
             await result.save();
@@ -37,6 +35,39 @@ export const fileUpload = async (req,res) =>{
             success: false,
           });
     }
+}
+
+export const userFileUpload = async (req,res) =>{
+  try {
+      const file = req.file;
+      console.log(file);
+      const workbook = XLSX.read(file.buffer, { type: 'buffer' });
+      const sheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[sheetName];
+  
+      // Convert the sheet data to JSON
+      const jsonData = XLSX.utils.sheet_to_json(worksheet);
+      console.log(jsonData);
+      for (let row of jsonData) {
+          let result = await Student.findOne({ studentId: row.studentId });
+          if (!result) {
+            result = new Student({ studentId: row.studentId });
+          }
+          result.name = row.name;
+          result.email = row.email;
+          await result.save();
+        }
+      return res.status(201).json({
+          message: "Marks uploaded successfully!",
+          success: true,
+        });
+  } catch (error) {
+      console.log(error);
+      return res.status(400).json({
+          message: "Error uploading marks.",
+          success: false,
+        });
+  }
 }
 
 // Function to retrieve student results

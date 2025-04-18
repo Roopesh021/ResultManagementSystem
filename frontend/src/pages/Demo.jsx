@@ -1,89 +1,13 @@
-import axios from "axios";
-import { UserContext } from "@/store/user-store";
-import { FILE_API_END_POINT } from "@/utils/constant";
-import { useContext, useEffect, useState, useRef } from "react";
-import { toast } from "sonner";
-import { useNavigate } from "react-router-dom";
-import "./dashboard.css";
+import React, { useRef, useState } from "react";
+import "./demo.css";
 import { FaCloudUploadAlt } from "react-icons/fa";
 import { BiTachometer } from "react-icons/bi";
 import { CiViewTable } from "react-icons/ci";
-import { FaUsers } from "react-icons/fa";
-const Dashboard = () => {
-  const { user, setUser } = useContext(UserContext);
-  console.log(user);
-
-  const navigate = useNavigate();
-
+import { toast } from "sonner";
+import { FILE_API_END_POINT } from "@/utils/constant";
+import Sidebar from "../components/Sidebar";
+const Demo = () => {
   const [activeTab, setActiveTab] = useState("attendance");
-  const [records, setRecords] = useState([]);
-
-  const fetchAttendanceRecords = async () => {
-    console.log("hello");
-    try {
-      const res = await axios.get(`${FILE_API_END_POINT}/attendance`, {
-        withCredentials: true,
-      });
-      if (res.data.success) {
-        setRecords(res.data.attendanceRecords);
-      }
-    } catch (error) {
-      console.error("Error fetching attendance records:", error);
-    }
-  };
-
-  const fetchProjectReviewRecords = async () => {
-    console.log("hello");
-    try {
-      const res = await axios.get(`${FILE_API_END_POINT}/projectReview`, {
-        withCredentials: true,
-      });
-      if (res.data.success) {
-        setRecords(res.data.projectReviewRecords);
-      }
-    } catch (error) {
-      console.error("Error fetching attendance records:", error);
-    }
-  };
-
-  const fetchassessmentRecords = async () => {
-    try {
-      const res = await axios.get(`${FILE_API_END_POINT}/assessment`, {
-        withCredentials: true,
-      });
-      if (res.data.success) {
-        setRecords(res.data.assessmentMarksRecords);
-      }
-    } catch (error) {
-      console.error("Error fetching attendance records:", error);
-    }
-  };
-
-  const fetchProjectSubmissionRecords = async () => {
-    try {
-      const res = await axios.get(`${FILE_API_END_POINT}/projectSubmission`, {
-        withCredentials: true,
-      });
-      if (res.data.success) {
-        setRecords(res.data.projectSubmissionMarksRecords);
-      }
-    } catch (error) {
-      console.error("Error fetching attendance records:", error);
-    }
-  };
-
-  const fetchLinkedinPostRecords = async () => {
-    try {
-      const res = await axios.get(`${FILE_API_END_POINT}/linkedinPost`, {
-        withCredentials: true,
-      });
-      if (res.data.success) {
-        setRecords(res.data.linkedinPostRecords);
-      }
-    } catch (error) {
-      console.error("Error fetching attendance records:", error);
-    }
-  };
 
   // Tabs for different categories of marks
   const tabs = [
@@ -146,38 +70,44 @@ const Dashboard = () => {
     }
   };
 
-  useEffect(() => {
-    if (activeTab === "attendance") {
-      fetchAttendanceRecords();
-    } else if (activeTab === "projectReview") {
-      fetchProjectReviewRecords();
-    } else if (activeTab === "assessment") {
-      fetchassessmentRecords();
-    } else if (activeTab === "projectSubmission") {
-      fetchProjectSubmissionRecords();
-    } else if (activeTab === "linkedInPost") {
-      fetchLinkedinPostRecords();
-    }
-    // Add conditions for other tabs if needed
-  }, [activeTab]);
+  const [records, setRecords] = useState([]);
 
   return (
     <>
-      <div className="admin-dashboard">
+      <Sidebar></Sidebar>
+      {/* <div className="admin-dashboard">
         <div className="a-head">
           <BiTachometer className="dash-icon" />
           <h1>Dashboard</h1>
         </div>
         <div className="a-content">
-          <div className="a-card">
-            <FaUsers className="fa-user-icon" />
-            <div>
-              <h1>Total Candidates</h1>
-              <h2>45</h2>
-            </div>
+          <div className="tabs">
+            {tabs.map((tab) => (
+              <button
+                key={tab.category}
+                className={activeTab === tab.category ? "active" : ""}
+                onClick={() => setActiveTab(tab.category)}
+              >
+                {tab.name}
+              </button>
+            ))}
           </div>
+          <form onSubmit={submitHandler} className="form-section">
+            <div className="form-container">
+              <input
+                type="file"
+                id="uploadBtn"
+                name="file"
+                onChange={changeFileHandler}
+                ref={fileInputRef}
+              ></input>
+              <label htmlFor="uploadBtn">
+                <FaCloudUploadAlt />
+              </label>
+              <button type="submit">Upload</button>
+            </div>
+          </form>
         </div>
-
         {activeTab === "attendance" && (
           <>
             <div className="a-head">
@@ -343,8 +273,9 @@ const Dashboard = () => {
             </div>
           </>
         )}
-      </div>
+      </div> */}
     </>
   );
 };
-export default Dashboard;
+
+export default Demo;
